@@ -6,7 +6,7 @@ Listonoska/API
 Instalace
 ------------
 
-Nejlepší cesta k instalaci je použití Composeru [Composer](http://getcomposer.org/):
+Nejlepší cesta k instalaci je použitím Composeru [Composer](http://getcomposer.org/):
 
 ```sh
 $ composer require listonoska/API
@@ -64,8 +64,10 @@ $data = array(
 $letter = new Listonoska\API\Letter($token); 
 $response = $letter->sendLetter($data); // odešleme dopis, vrátí se nám info o odeslaném dopisu
 ```
+U dopisu toho můžeme posílat více. Co vše lze odeslat naleznete v [dokumentaci](http://docs.listonoska.apiary.io/#reference/prace-s-dopisem/odeslani-dopisu/odeslani-dopisu).
 
-Ještě můžeme získat podací lístek u doporučených dopisů (dodací lístek nemusí být hned dostupný od vašeho podání)
+
+Ještě můžeme získat podací lístek u doporučených dopisů (podací lístek nemusí být hned dostupný od vašeho podání)
 ```PHP
 $letter = new Listonoska\API\Letter($token); 
 $response = $letter->getPostalReceipt($letterId); // id dopisu získáme z odpovědi po odeslání dopisu
