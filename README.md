@@ -1,7 +1,6 @@
 Listonoska/API
 ======
 
-[![Downloads this Month](https://img.shields.io/packagist/dm/listonoska/API.svg)](https://packagist.org/packages/Listonoska/API)
 [![Latest stable](https://img.shields.io/packagist/v/listonoska/API.svg)](https://packagist.org/packages/Listonoska/API)
 
 Instalace
