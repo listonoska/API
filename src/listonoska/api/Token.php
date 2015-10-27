@@ -43,6 +43,7 @@ class Token extends Curl
 	 * @return string
 	 * 
 	 * @throws Exceptions\CurlException
+	 * @throws Exceptions\AuthException
 	 */
 	public function getToken(){
 		if($this->token){
@@ -61,6 +62,7 @@ class Token extends Curl
 	 * @return string
 	 * 
 	 * @throws Exceptions\CurlException
+	 * @throws Exceptions\AuthException
 	 */
 	public function getRefreshToken(){
 		if($this->token){
@@ -79,6 +81,7 @@ class Token extends Curl
 	 * @return int
 	 * 
 	 * @throws Exceptions\CurlException
+	 * @throws Exceptions\AuthException
 	 */
 	public function getExpireTime(){
 		if($this->token){
@@ -93,15 +96,20 @@ class Token extends Curl
 	
 	/**
 	 * @throws Exceptions\CurlException
+	 * @throws Exceptions\AuthException
 	 */
 	private function createRequest(){
 		$response = $this->curlRequest(self::REQUEST_URL, array(
 		    'client_id' => $this->client,
 		    'client_secret' => $this->secret,
 		));
-				
-		$this->token = $response->access_token;
-		$this->refreshToken = $response->refresh_token;
-		$this->expireTime = $response->expires_in;
+			
+		if(isset($response->access_token)){
+			$this->token = $response->access_token;
+			$this->refreshToken = $response->refresh_token;
+			$this->expireTime = $response->expires_in;
+		} else {
+			throw new Exceptions\AuthException($response->error_description);
+		}
 	}
 }
