@@ -4,7 +4,7 @@ namespace Listonoska\API;
 
 /**
  * @author Jan Matoušek <matousek.vr@gmail.com>
- * @ version 1.0
+ * @ version 1.1
  */
 class Letter extends Curl 
 {
@@ -33,6 +33,11 @@ class Letter extends Curl
 	 * @throws Exceptions\CurlException
 	 */
 	public function sendLetter($fields){
+		
+		if(isset($fields['addresse'])){
+			$fields['addresse'] = http_build_query($fields['addresse'] ); // fix for curl
+		}
+		
 		return $this->curlRequest(self::REQUEST_URL_SEND_LETTER, $fields, $this->token);
 	}
 	

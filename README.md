@@ -44,7 +44,7 @@ $data = array(
     'senderOrientationNumber' => 5,
     'senderCity' => 'Praha',
     'senderZip' => '110 00',
-    'addresse' => http_build_query(array( //vícerozměrné pole v curl blbne, ale pokud z adres postavíme takto query, tak to listonoška pochopí
+    'addresse' => array( 
 	array( // první adresát
 	    'person' => 'Radek Novák',
 	    'street' => 'Lebedova',
@@ -57,7 +57,7 @@ $data = array(
 	    'city' => 'Praha',
 	    'zip' => '110 00',
         ),	
-    )),
+    ),
     'pdf1' => new CurlFile( realpath(__DIR__ . '/example.pdf')) // pdf soubor
 );
 
