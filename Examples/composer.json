@@ -1,10 +1,4 @@
 {
-	"repositories": [
-	    {
-		"type": "vcs",
-		"url": "C:/xampp/htdocs/listonoska.API/.git"
-	    }
-	],
 	"name": "listonoska/examples",
 	"description": "Listonsoka examples.",
 	"homepage": "https://listonoska.cz",
