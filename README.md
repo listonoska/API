@@ -45,17 +45,17 @@ $data = array(
     'senderCity' => 'Praha',
     'senderZip' => '110 00',
     'addresse' => array( 
-	array( // první adresát
-	    'person' => 'Radek Novák',
-	    'street' => 'Lebedova',
-	    'city' => 'Praha',
-	    'zip' => '110 00',
+        array( // první adresát
+            'person' => 'Radek Novák',
+            'street' => 'Lebedova',
+            'city' => 'Praha',
+            'zip' => '110 00',
         ),
-	array( // druhý adresát
-	    'person' => 'Radek Novotný',
-	    'street' => '17.listopadu',
-	    'city' => 'Praha',
-	    'zip' => '110 00',
+        array( // druhý adresát
+            'person' => 'Radek Novotný',
+            'street' => '17.listopadu',
+            'city' => 'Praha',
+            'zip' => '110 00',
         ),	
     ),
     'pdf1' => new CurlFile( realpath(__DIR__ . '/example.pdf')) // pdf soubor
