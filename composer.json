@@ -1,0 +1,18 @@
+{
+    "name": "listonoska/api",
+    "description": "API for listonoska.cz",
+	"keywords": ["listonoska", "api"],
+	"homepage": "https://www.listonoska.cz",
+    "license": "New BSD",
+    "authors": [
+        {
+            "name": "Jan Matoušek",
+            "email": "matousek.vr@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Listonoska\\API": "src/"
+        }
+    }
+}

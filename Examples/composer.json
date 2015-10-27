@@ -1,0 +1,23 @@
+{
+	"repositories": [
+	    {
+		"type": "vcs",
+		"url": "C:/xampp/htdocs/listonoska.API/.git"
+	    }
+	],
+	"name": "listonoska/examples",
+	"description": "Listonsoka examples.",
+	"homepage": "https://listonoska.cz",
+	"type": "project",
+	"license": ["Unlicense"],
+	"authors": [
+            {
+                "name": "Jan Matoušek",
+                "email": "matousek.vr@gmail.com"
+            }
+	],
+	"require": {
+		"php": ">= 5.3.7",
+		"listonoska/api": "~1.0"
+	}
+}

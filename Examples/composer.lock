@@ -1,0 +1,52 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "aa1490fc17b8a4623be0800c1ca12de7",
+    "content-hash": "a371f647d0674cfc5ad453f1df4e5897",
+    "packages": [
+        {
+            "name": "listonoska/api",
+            "version": "1.0.10",
+            "source": {
+                "type": "git",
+                "url": "C:/xampp/htdocs/listonoska.API/.git",
+                "reference": "7f07cf75285ebdba9332851bdeb87aa12c4ca5b2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Listonoska\\API": "src/"
+                }
+            },
+            "license": [
+                "New BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Matoušek",
+                    "email": "matousek.vr@gmail.com"
+                }
+            ],
+            "description": "API for listonoska.cz",
+            "homepage": "https://www.listonoska.cz",
+            "keywords": [
+                "api",
+                "listonoska"
+            ],
+            "time": "2015-10-27 09:52:09"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">= 5.3.7"
+    },
+    "platform-dev": []
+}
