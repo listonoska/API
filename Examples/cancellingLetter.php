@@ -12,7 +12,7 @@ if(isset($response->status) && isset($response->code) && $response->status == 'e
 	$token = new \Listonoska\API\Token(CLIENT_ID, SECRET);
 	$_SESSION['listonoska_token'] = $token->getToken(); // získáme nový token
 	
-	$listOfValues = new Listonoska\API\ListsOfValues($_SESSION['listonoska_token']); //a zkusíme poslat dopis znovu
+	$letter = new Listonoska\API\ListsOfValues($_SESSION['listonoska_token']); //a zkusíme poslat dopis znovu
 	$response = $letter->cancelLetter($letterId);
 }
 
