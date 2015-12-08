@@ -5,7 +5,6 @@ Listonoska/API
 
 Instalace
 ------------
-
 Nejlepší cesta k instalaci je použitím Composeru [Composer](http://getcomposer.org/):
 
 ```sh
@@ -25,7 +24,7 @@ $token->getToken(); // vrátí token
 
 potom si můžeme získat číselníky:
 ```PHP
-$listOfValues = new Listonoska\API\ListsOfValues($token);
+$listOfValues = new \Listonoska\API\ListsOfValues($token);
 $listOfValues->getDeliveryTypes(); // číselník typů dodání
 $listOfValues->getPrintTypes(); // číselník typů tisku
 $listOfValues->getIsoCodes(); // číselník iso kódů
@@ -58,10 +57,10 @@ $data = array(
             'zip' => '110 00',
         ),	
     ),
-    'pdf1' => new CurlFile( realpath(__DIR__ . '/example.pdf')) // pdf soubor
+    'pdf1' => new \CurlFile( realpath(__DIR__ . '/example.pdf')) // pdf soubor
 );
 
-$letter = new Listonoska\API\Letter($token); 
+$letter = new \Listonoska\API\Letter($token); 
 $response = $letter->sendLetter($data); // odešleme dopis, vrátí se nám info o odeslaném dopisu
 ```
 U dopisu toho můžeme posílat více. Co vše lze odeslat naleznete v [dokumentaci](http://docs.listonoska.apiary.io/#reference/prace-s-dopisem/odeslani-dopisu/odeslani-dopisu).
@@ -69,6 +68,6 @@ U dopisu toho můžeme posílat více. Co vše lze odeslat naleznete v [dokument
 
 Ještě můžeme získat podací lístek u doporučených dopisů (podací lístek nemusí být hned dostupný od vašeho podání)
 ```PHP
-$letter = new Listonoska\API\Letter($token); 
+$letter = new \Listonoska\API\Letter($token); 
 $response = $letter->getPostalReceipt($letterId); // id dopisu získáme z odpovědi po odeslání dopisu
 ```

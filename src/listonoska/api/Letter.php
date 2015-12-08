@@ -4,12 +4,13 @@ namespace Listonoska\API;
 
 /**
  * @author Jan Matoušek <matousek.vr@gmail.com>
- * @ version 1.1
+ * @ version 1.2
  */
 class Letter extends Curl 
 {
 	const REQUEST_URL_SEND_LETTER = 'https://www.listonoska.cz/resources/send-letter';
 	const REQUEST_URL_POSTAL_RECEIPT = 'https://www.listonoska.cz/resources/postal-receipt/';
+	const REQUEST_URL_CANCEL = 'https://www.listonoska.cz/resources/letter-cancel/';
 	
 	/** @var string */
 	private $token;
@@ -53,5 +54,19 @@ class Letter extends Curl
 	 */
 	public function getPostalReceipt($letterId){
 		return $this->curlRequest(self::REQUEST_URL_POSTAL_RECEIPT . $letterId, FALSE, $this->token, FALSE);
-	}	
+	}
+	
+	
+	/**
+	 * Cancels letter
+	 * 
+	 * @param int $letterId
+	 * 
+	 * @return StdObject
+	 * 
+	 * @throws Exceptions\CurlException
+	 */
+	public function cancelLetter($letterId){
+		return $this->curlRequest(self::REQUEST_URL_CANCEL . $letterId, FALSE, $this->token, FALSE);
+	}
 }
