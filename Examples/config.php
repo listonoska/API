@@ -1,4 +1,4 @@
 <?php
 
-define('CLIENT_ID', 'client');
-define('SECRET', 'secret');
+define('CLIENT_ID', 'test');
+define('SECRET', 'test');
