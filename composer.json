@@ -1,6 +1,5 @@
 {
     "name": "listonoska/api",
-    "version": "1.1.0"
     "description": "API for listonoska.cz",
 	"keywords": ["listonoska", "api"],
 	"homepage": "https://www.listonoska.cz",
